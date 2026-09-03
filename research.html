@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Research by Kaiwen Qiu on real-time forecasting, LLM economic sentiment, factor-augmented VAR models, the yield curve, and reinforcement learning."
+    />
+    <meta name="theme-color" content="#101829" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://q136844908.github.io/research.html"
+    />
+    <meta property="og:title" content="Research — Kaiwen Qiu" />
+    <meta
+      property="og:description"
+      content="Four papers across real-time forecasting, econometrics, LLM narratives, and reinforcement learning."
+    />
+    <meta
+      property="og:image"
+      content="https://q136844908.github.io/assets/og-preview.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://q136844908.github.io/research.html" />
+    <title>Research — Kaiwen Qiu</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="subpage">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Kaiwen Qiu home"
+        >KQ<span>•</span></a
+      >
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" aria-current="page" href="research.html">Research</a>
+        <a href="econbert.html">EconBERT</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a
+        class="nav-cv"
+        href="assets/Kaiwen_Qiu_CV.pdf"
+        target="_blank"
+        rel="noreferrer"
+        >CV <span aria-hidden="true">↗</span></a
+      >
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-intro section-shell">
+        <p class="section-index">01 / Research</p>
+        <h1>Forecasts should survive contact with real time.</h1>
+        <p>
+          My work connects econometric theory, machine learning, and
+          text-as-data with a consistent question: what information would truly
+          have been available when a forecast was made?
+        </p>
+      </section>
+
+      <section class="section-shell paper-archive" aria-label="Research papers">
+        <article class="paper-entry coral">
+          <div class="paper-number">01</div>
+          <div class="paper-content">
+            <h2>
+              New Evidence of the Usefulness of Real-Time Sentiment Indices in
+              Econometric and Judgement-Based Forecasting Models
+            </h2>
+            <p class="paper-authors">
+              <strong>Kaiwen Qiu</strong>, A. Kabiri, John Landon-Lane, and
+              Norman R. Swanson
+            </p>
+            <p class="paper-status">
+              Job Market Paper · Journal Submitted · 2026
+            </p>
+            <div class="tags">
+              <span>EconBERT</span><span>Real-time data</span
+              ><span>Survey of Professional Forecasters</span
+              ><span>Macroeconomic forecasting</span>
+            </div>
+            <details class="abstract-panel">
+              <summary>Abstract <span>+</span></summary>
+              <p>
+                In this paper we construct a set of new narrative sentiment
+                indices using textual data from a large corpus of U.S. economic
+                and policy documents. The indices are designed for use in
+                real-time forecasting contexts and are constructed using
+                transformer-based language models and LLM-assisted annotation.
+                They include a finance-domain transformer; an economics-tone
+                model trained on LLM-generated annotations of Federal Reserve,
+                BLS, and Census text; and a topic-conditioned narrative measure.
+              </p>
+              <p>
+                To determine the usefulness of these three indices for
+                forecasting, we carry out a series of experiments in which their
+                marginal predictive content is assessed. We first assess the
+                predictive content of the indices in econometric models used for
+                real-time U.S. macroeconomic and financial forecasting. We then
+                assess whether our sentiment indices contain information that
+                can be utilized to improve the quasi-judgemental forecasts
+                reported in the United States Survey of Professional Forecasters
+                (SPF). This is done by testing the rationality of SPF forecasts
+                when conditioning on both real-time macroeconomic variables and
+                our sentiment indices.
+              </p>
+              <p>
+                In the real-time forecasting experiment, the autoregressive
+                benchmark attains the lowest mean square forecast error in 11 of
+                44 target-variable and forecast-horizon cases, while one of the
+                eleven alternative models attains the lowest mean square
+                forecast error in the remaining 33 cases. Among these 33 cases,
+                31 involve specifications containing at least one sentiment
+                index and two involve the macroeconomic-variable-only
+                specification. In addition, we find that SPF forecasts
+                incorporate the information contained in our three
+                contemporaneous economic narrative indices, but do not
+                incorporate the information contained in two widely used
+                consumer-sentiment survey indices. Thus, real-time econometric
+                forecasts can be made more accurate by incorporating information
+                from our new narrative indices, while judgemental forecasts can
+                be made more accurate by utilizing information available in
+                consumer sentiment indices, but not by utilizing information
+                available in our new narrative sentiment indices.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article class="paper-entry aqua">
+          <div class="paper-number">02</div>
+          <div class="paper-content">
+            <h2>
+              Consistent Factor Estimation and Forecasting in Factor-Augmented
+              VAR Models
+            </h2>
+            <p class="paper-authors">
+              John Chao, Yu Liu, <strong>Kaiwen Qiu</strong>, and Norman R.
+              Swanson
+            </p>
+            <p class="paper-status">2026</p>
+            <div class="tags">
+              <span>Factor models</span><span>Variable selection</span
+              ><span>FAVAR</span><span>Forecasting</span>
+            </div>
+            <details class="abstract-panel">
+              <summary>Abstract <span>+</span></summary>
+              <p>
+                In this paper we establish that conditional mean functions
+                associated with h-step-ahead forecasting equations implied by
+                factor-augmented vector autoregressions (FAVARs) can be
+                consistently estimated when factor pervasiveness does not hold.
+                In particular, we begin by stating a common assumption of factor
+                pervasiveness in which all available predictor variables,
+                excepting a negligible subset, load significantly on the
+                underlying factors. We then establish that even when this
+                assumption is relaxed, consistent factor estimation can be
+                achieved if one pre-screens the variables and successfully
+                prunes out the irrelevant ones.
+              </p>
+              <p>
+                Furthermore, using factors estimated in this manner when
+                constructing h-step-ahead forecasting equations implied by FAVAR
+                models enables consistent estimation of the conditional mean
+                function of those equations. Conditional mean functions
+                constructed using our procedure are consistently estimable in a
+                wide range of situations, including cases where violation of
+                factor pervasiveness is such that consistent estimation is
+                precluded in the absence of variable pre-screening.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article class="paper-entry violet">
+          <div class="paper-number">03</div>
+          <div class="paper-content">
+            <h2>
+              Diffusion Indices, Policy Rules, and LLM Narratives: Forecasting
+              the U.S. Yield Curve in Real Time
+            </h2>
+            <p class="paper-authors"><strong>Kaiwen Qiu</strong></p>
+            <p class="paper-status">2026</p>
+            <div class="tags">
+              <span>Yield curve</span><span>LLM narratives</span
+              ><span>Monetary policy</span><span>RDNS</span
+              ><span>Real-time forecasting</span>
+            </div>
+            <details class="abstract-panel">
+              <summary>Abstract <span>+</span></summary>
+              <p>
+                Econometricians increasingly rely on machine-learning tools to
+                summarize information in data-rich environments, yet the
+                relative forecasting value of macro-based diffusion indices,
+                text-based LLM sentiment indices, and monetary-policy-rule
+                information remains unclear within a unified term-structure
+                framework. This paper conducts a horse race across these
+                information sets by embedding them in a dynamic Nelson-Siegel
+                class model, including its rotated short-rate-based
+                representation (RDNS).
+              </p>
+              <p>
+                We compare three families of real-time diffusion indices
+                constructed from large macro panels: principal components (PCA),
+                targeted shrinkage via LASSO and Elastic Net (EN), and the
+                Chao-Swanson (CS) variable-selection approach. We further
+                introduce three LLM-based text indices designed to capture
+                policy-relevant narratives: an off-the-shelf FinBERT sentiment
+                measure, an economics-domain-trained BERT index, and a
+                topic-fusion fine-tuned index that integrates topic structure
+                with supervised sentiment signals. Finally, we incorporate
+                monetary-policy information through Taylor-rule components and
+                Taylor-rule residuals, interpreted as policy shocks and
+                motivated by the forward-looking policy-rule literature.
+              </p>
+              <p>
+                Using a real-time rolling-window design, we forecast yields
+                across maturities and horizons. Our results show that CS-based
+                diffusion indices extract more forecasting-relevant macro
+                information than conventional LASSO/EN targeted-PCA
+                constructions; LLM-based indices contain incremental predictive
+                content beyond macro diffusion indices, particularly around
+                policy-relevant episodes; and adding Taylor-rule components
+                and/or policy shocks improves short- and intermediate-horizon
+                yield forecasts, with the largest gains concentrated at the
+                short end of the curve. Overall, combining policy-rule
+                information with data-rich indices delivers the most reliable
+                improvements in predictive accuracy for the U.S. Treasury yield
+                curve.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article class="paper-entry gold">
+          <div class="paper-number">04</div>
+          <div class="paper-content">
+            <h2>
+              Algorithmic Trading by Reinforcement Learning in a Collaborative
+              Manner
+            </h2>
+            <p class="paper-authors">
+              Li Long, Chunxia Zhang, Cong Ma, Hongtao Wang, Lizhen Ji, Fei Gao,
+              Jiangshe Zhang, and <strong>Kaiwen Qiu</strong>
+            </p>
+            <p class="paper-status">
+              Applied Soft Computing · Volume 197 · Article 115168 · 2026
+            </p>
+            <div class="tags">
+              <span>Reinforcement learning</span><span>Algorithmic trading</span
+              ><span>Distributed learning</span><span>Self-imitation</span
+              ><span>CSI-DDQN</span>
+            </div>
+            <a
+              class="publication-link"
+              href="https://doi.org/10.1016/j.asoc.2026.115168"
+              target="_blank"
+              rel="noreferrer"
+              >View published article <span aria-hidden="true">↗</span></a
+            >
+            <details class="abstract-panel">
+              <summary>Abstract <span>+</span></summary>
+              <p>
+                In recent years, reinforcement learning has emerged as a
+                prominent approach in algorithmic trading, with most studies
+                concentrating on time-series processing and neural-network
+                architecture optimization within single-agent frameworks. Some
+                research has confirmed that multi-agent or ensemble learning can
+                enhance performance, but conventional methods often train
+                ensemble neural networks or diverse reinforcement learning
+                algorithms on the entire time-series dataset. These practices
+                not only lead to high computational costs but also hinder the
+                efficient recognition of market fluctuations.
+              </p>
+              <p>
+                To address these challenges, this paper introduces a novel
+                Collaborative Self-Imitation Double Deep Q Network (CSI-DDQN)
+                framework. The proposed approach partitions long-term
+                time-series data into shorter segments and employs a
+                distributed-learning-inspired collaborative training strategy
+                across multiple clients. A self-imitation strategy enhances
+                cooperation among clients, while a hybrid multi-loss function
+                integrates the strengths of reinforcement learning and imitation
+                learning.
+              </p>
+              <p>
+                Experimental results using a multi-layer perceptron architecture
+                on U.S. stock data demonstrate that the proposed method
+                significantly outperforms several baselines, achieving the
+                highest average cumulative return of 56.85%, the highest Sharpe
+                ratio of 1.42, and the lowest maximum drawdown of 17.14%. In
+                comparison, DQN-Vanilla attains an average cumulative return of
+                3.95% and a Sharpe ratio of 0.25, while the DRL-Ensemble method
+                yields a cumulative return of 19.53% and a Sharpe ratio of 0.54.
+                Additional experiments substituting various network
+                architectures and reinforcement-learning algorithms further
+                validate the flexibility and effectiveness of the CSI-DDQN
+                framework.
+              </p>
+            </details>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-shell page-cta">
+        <p>For a complete academic record, teaching history, and references:</p>
+        <a
+          class="button-primary"
+          href="assets/Kaiwen_Qiu_CV.pdf"
+          target="_blank"
+          rel="noreferrer"
+          >Download curriculum vitae <span aria-hidden="true">↓</span></a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Kaiwen Qiu</span>
+      <span>Research</span>
+      <a href="econbert.html">Next: EconBERT →</a>
+    </footer>
+  </body>
+</html>

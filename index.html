@@ -76,15 +76,15 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Kaiwen Qiu home"
+      <a class="wordmark" href="index.html" aria-label="Kaiwen Qiu home"
         >KQ<span>•</span></a
       >
       <nav aria-label="Primary navigation">
-        <a href="#research">Research</a>
-        <a href="#econbert-research">EconBERT</a>
-        <a href="#experience">Experience</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
+        <a class="active" aria-current="page" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="econbert.html">EconBERT</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <a
         class="nav-cv"
@@ -119,17 +119,13 @@
               rel="noreferrer"
               >Download CV <span aria-hidden="true">↓</span></a
             >
-            <a class="button-secondary" href="mailto:kq60@economics.rutgers.edu"
-              >Start a conversation <span aria-hidden="true">↗</span></a
+            <a class="button-secondary" href="contact.html"
+              >Contact <span aria-hidden="true">↗</span></a
             >
           </div>
-          <p class="role-note">
-            Interested in academic, economic research, quantitative research,
-            and applied data science roles.
-          </p>
         </div>
 
-        <div class="hero-demo" id="econbert">
+        <div class="hero-demo" id="econbert-demo">
           <div class="demo-card">
             <div class="demo-topline">
               <div>
@@ -200,8 +196,8 @@
               = P(positive) − P(negative).
             </p>
           </div>
-          <a class="demo-link" href="#econbert-research"
-            >How the research works <span aria-hidden="true">↓</span></a
+          <a class="demo-link" href="econbert.html"
+            >Read about EconBERT <span aria-hidden="true">→</span></a
           >
         </div>
       </section>
@@ -212,7 +208,9 @@
             <strong>Job Market Paper</strong
             ><span>Real-time narrative indices</span>
           </div>
-          <div><strong>R&amp;R</strong><span>Quantitative Economics</span></div>
+          <div>
+            <strong>4 papers</strong><span>Econometrics · LLMs · RL</span>
+          </div>
           <div>
             <strong>PGIM · 2025</strong><span>Quantitative research</span>
           </div>
@@ -222,393 +220,46 @@
         </div>
       </section>
 
-      <section class="section-shell section-block" id="research">
-        <div class="section-heading">
-          <p class="section-index">01 / Selected research</p>
-          <h2>Forecasts should survive contact with real time.</h2>
-          <p>
-            My work connects econometric theory, machine learning, and
-            text-as-data with a consistent question: what information would
-            truly have been available when a forecast was made?
-          </p>
-        </div>
-
-        <div class="research-list">
-          <article class="research-card featured coral">
-            <div class="paper-number">01</div>
-            <div class="paper-body">
-              <p>Job Market Paper · 2026</p>
-              <h3>
-                New Evidence of the Usefulness of Real-Time Sentiment Indices in
-                Econometric and Judgement-Based Forecasting Models
-              </h3>
-              <p class="paper-authors">
-                with A. Kabiri, John Landon-Lane, and Norman R. Swanson
-              </p>
-              <div class="tags">
-                <span>EconBERT</span><span>Real-time data</span><span>SPF</span
-                ><span>Macroeconomic forecasting</span>
-              </div>
-            </div>
-            <div class="paper-summary">
-              <p>
-                Constructs three transformer-based narrative measures from U.S.
-                economic and policy documents, then tests their marginal
-                predictive content in real-time models and Survey of
-                Professional Forecasters efficiency regressions.
-              </p>
-              <div class="paper-result">
-                <strong>31 / 33</strong
-                ><span
-                  >best-performing alternative specifications included at least
-                  one sentiment index.</span
-                >
-              </div>
-              <details>
-                <summary>Research contribution <span>+</span></summary>
-                <p>
-                  Narrative indices improve the econometric forecast set across
-                  target-variable and horizon combinations. SPF forecasts
-                  incorporate the new narrative measures, while widely used
-                  consumer-sentiment surveys still contain unexploited
-                  information.
-                </p>
-              </details>
-            </div>
-          </article>
-
-          <article class="research-card aqua">
-            <div class="paper-number">02</div>
-            <div class="paper-body">
-              <p>Quantitative Economics · Revise &amp; Resubmit</p>
-              <h3>
-                Consistent Factor Estimation and Forecasting in Factor-Augmented
-                VAR Models
-              </h3>
-              <p class="paper-authors">
-                with John Chao, Yu Liu, and Norman R. Swanson
-              </p>
-              <div class="tags">
-                <span>Factor models</span><span>Variable selection</span
-                ><span>Forecasting</span>
-              </div>
-            </div>
-            <div class="paper-summary">
-              <p>
-                Establishes when pre-screening irrelevant predictors restores
-                consistent factor estimation—and consistent conditional-mean
-                estimation—even when standard factor pervasiveness fails.
-              </p>
-              <details>
-                <summary>Research contribution <span>+</span></summary>
-                <p>
-                  The result gives data-rich forecasters a principled reason to
-                  screen predictors before extracting factors, expanding the
-                  settings in which FAVAR forecasts remain consistently
-                  estimable.
-                </p>
-              </details>
-            </div>
-          </article>
-
-          <article class="research-card violet">
-            <div class="paper-number">03</div>
-            <div class="paper-body">
-              <p>Working Paper · 2026</p>
-              <h3>Diffusion Indices, Policy Rules, and LLM Narratives</h3>
-              <p class="paper-authors">
-                Forecasting the U.S. Yield Curve in Real Time
-              </p>
-              <div class="tags">
-                <span>Yield curve</span><span>LLM narratives</span
-                ><span>Monetary policy</span><span>RDNS</span>
-              </div>
-            </div>
-            <div class="paper-summary">
-              <p>
-                Runs a unified real-time horse race across macro diffusion
-                indices, LLM narrative measures, and monetary-policy-rule
-                information in dynamic Nelson–Siegel models.
-              </p>
-              <details>
-                <summary>Research contribution <span>+</span></summary>
-                <p>
-                  Variable-selection-based diffusion indices outperform
-                  conventional targeted-PCA alternatives; LLM indices add
-                  predictive information; and policy-rule components yield the
-                  largest improvements at the short end of the curve.
-                </p>
-              </details>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section
-        class="econbert-story"
-        id="econbert-research"
-        aria-labelledby="econbert-title"
+        class="section-shell home-directory"
+        aria-labelledby="explore-title"
       >
-        <div class="section-shell">
-          <div class="story-heading">
-            <div>
-              <p class="section-index light">02 / EconBERT research</p>
-              <h2 id="econbert-title">
-                Economic direction,<br />not generic emotion.
-              </h2>
-            </div>
+        <div>
+          <p class="section-index">Explore</p>
+          <h2 id="explore-title">A shorter path to the work.</h2>
+        </div>
+        <div class="directory-grid">
+          <a href="research.html"
+            ><span>01</span><strong>Research</strong>
             <p>
-              General sentiment models often confuse cautious wording with bad
-              economic news. EconBERT instead asks what a passage implies for
-              macroeconomic conditions—so easing inflation pressure can be
-              positive even when the prose sounds restrained.
+              Four papers across forecasting, econometrics, LLM narratives, and
+              reinforcement learning.
             </p>
-          </div>
-
-          <div class="method-grid">
-            <article>
-              <span>01</span>
-              <h3>Domain corpus</h3>
-              <p>
-                Federal Reserve, BLS, and Census narratives anchor the model in
-                official economic language.
-              </p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>LLM-assisted labels</h3>
-              <p>
-                Pre-2013 passages receive positive, neutral, or negative
-                macro-direction labels.
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Distilled classifier</h3>
-              <p>
-                A compact DistilBERT student learns the task, then remains
-                frozen out of sample.
-              </p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Real-time index</h3>
-              <p>
-                Passage scores become source-balanced monthly measures suitable
-                for forecast evaluation.
-              </p>
-            </article>
-          </div>
-
-          <div class="metric-strip">
-            <div><strong>87.3%</strong><span>Validation accuracy</span></div>
-            <div><strong>0.852</strong><span>Macro F1</span></div>
-            <div><strong>1,831</strong><span>Validation excerpts</span></div>
-            <div><strong>224 / 32</strong><span>Tokens / overlap</span></div>
-          </div>
-
-          <figure class="research-figure">
-            <img
-              src="assets/econbert-sentiment-series.png"
-              alt="Historical EconBERT and FinBERT monthly sentiment series, alternative weighting schemes, and topic-conditioned tone measures"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>From passages to economic signals.</strong> Narrative
-              indices respond sharply around recessions while preserving
-              meaningful differences across models, source weighting, and
-              economic topics.
-            </figcaption>
-          </figure>
-
-          <div class="researcher-note">
-            <p>Research interests</p>
-            <div>
-              <span>Domain-specific language models</span
-              ><span>Text-as-data measurement</span
-              ><span>Real-time forecast evaluation</span
-              ><span>Human and model expectations</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell section-block" id="experience">
-        <div class="section-heading horizontal">
-          <div>
-            <p class="section-index">03 / Experience &amp; methods</p>
-            <h2>Research that moves from proof to pipeline.</h2>
-          </div>
-          <p>
-            I work across theory, reproducible empirical design, and
-            production-minded quantitative analysis.
-          </p>
-        </div>
-
-        <div class="experience-grid">
-          <article class="experience-feature">
-            <p class="eyebrow">PGIM Quantitative Solutions · Summer 2025</p>
-            <h3>Quantitative Researcher Intern</h3>
-            <ul>
-              <li>
-                Developed nonlinear G10 FX timing signals with Random Forests
-                and long/short backtests.
-              </li>
-              <li>
-                Used SHAP attribution to make model behavior and risk budgeting
-                more transparent.
-              </li>
-              <li>
-                Built transfer-entropy signals connecting economic-surprise
-                shocks to intraday FX moves.
-              </li>
-            </ul>
-          </article>
-
-          <div class="capability-stack">
-            <article>
-              <span>Research design</span
-              ><strong
-                >Real-time vintages · rolling windows · forecast comparison ·
-                factor models</strong
-              >
-            </article>
-            <article>
-              <span>Machine learning</span
-              ><strong
-                >Transformers · Random Forests · LASSO / Elastic Net ·
-                reinforcement learning</strong
-              >
-            </article>
-            <article>
-              <span>Implementation</span
-              ><strong>Python · R · MATLAB · Stata · GAUSS</strong>
-            </article>
-            <article>
-              <span>Large-scale data</span
-              ><strong
-                >130+ real-time macro series · TAQ intraday panels · economic
-                text corpora</strong
-              >
-            </article>
-          </div>
-        </div>
-
-        <div class="signal-grid">
-          <article>
-            <b>Research assistantship</b>
+            <b>View page →</b></a
+          >
+          <a href="econbert.html"
+            ><span>02</span><strong>EconBERT</strong>
             <p>
-              Built DrdidGmm, a doubly robust difference-in-differences R
-              package with GMM estimation and multiple robust-inference options.
+              Model design, economic-tone measurement, and real-time narrative
+              indices.
             </p>
-          </article>
-          <article>
-            <b>Academic service</b>
+            <b>View page →</b></a
+          >
+          <a href="experience.html"
+            ><span>03</span><strong>Experience</strong>
             <p>
-              Referee for the Journal of Time Series Analysis, International
-              Journal of Forecasting, and Journal of Financial Econometrics.
+              Education, quantitative research, research assistantships, and
+              teaching.
             </p>
-          </article>
-          <article>
-            <b>Recognition</b>
+            <b>View page →</b></a
+          >
+          <a href="contact.html"
+            ><span>04</span><strong>Contact</strong>
             <p>
-              Graduate Dissertation Award, Peter Asch Memorial Scholarship, and
-              Sidney I. Simon Teaching Award.
+              Get in touch about recruiting, collaboration, or economic NLP.
             </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="credentials" id="teaching">
-        <div class="section-shell credential-grid">
-          <article>
-            <b class="credential-icon">△</b>
-            <p class="section-index light">Education</p>
-            <h2>Econometrics, from theory to implementation.</h2>
-            <ul>
-              <li>
-                <strong>Rutgers University</strong
-                ><span
-                  >Ph.D., Econometrics &amp; Quantitative Economics ·
-                  2021–present</span
-                >
-              </li>
-              <li>
-                <strong>Princeton University</strong
-                ><span>Exchange Ph.D. Student · 2022</span>
-              </li>
-              <li>
-                <strong>Georgetown University</strong
-                ><span
-                  >M.S., Econometrics &amp; Quantitative Economics · 2021</span
-                >
-              </li>
-              <li>
-                <strong>University of Colorado Boulder</strong
-                ><span>B.A., Mathematical Economics · 2019</span>
-              </li>
-            </ul>
-          </article>
-          <article>
-            <b class="credential-icon">□</b>
-            <p class="section-index light">Teaching</p>
-            <h2>Making quantitative ideas usable.</h2>
-            <ul>
-              <li>
-                <strong>Econometrics</strong
-                ><span>Instructor · Course evaluation 4.71 / 5</span>
-              </li>
-              <li>
-                <strong>R Workshop</strong
-                ><span>Instructor · 2024, 2025, 2026</span>
-              </li>
-              <li>
-                <strong>Graduate methods</strong
-                ><span
-                  >Advanced Time Series, Econometrics I &amp; II, Economics for
-                  Big Data</span
-                >
-              </li>
-              <li>
-                <strong>Macroeconomics</strong
-                ><span
-                  >Teaching Assistant · Introductory through intermediate
-                  courses</span
-                >
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell contact" id="contact">
-        <div class="contact-card">
-          <p class="section-index">04 / Let’s connect</p>
-          <h2>Recruiting, research, or a conversation about economic NLP.</h2>
-          <p>
-            I’m especially glad to hear from teams working on forecasting, macro
-            and financial data, interpretable machine learning, or
-            domain-specific language models.
-          </p>
-          <div class="contact-actions">
-            <a class="button-primary" href="mailto:kq60@economics.rutgers.edu"
-              >kq60@economics.rutgers.edu <span aria-hidden="true">↗</span></a
-            >
-            <a
-              class="button-secondary"
-              href="assets/Kaiwen_Qiu_CV.pdf"
-              target="_blank"
-              rel="noreferrer"
-              >Curriculum vitae <span aria-hidden="true">↓</span></a
-            >
-            <a
-              class="text-link"
-              href="https://github.com/q136844908"
-              target="_blank"
-              rel="noreferrer"
-              >GitHub <span aria-hidden="true">↗</span></a
-            >
-          </div>
+            <b>View page →</b></a
+          >
         </div>
       </section>
     </main>
@@ -616,7 +267,7 @@
     <footer>
       <span>© <span id="current-year">2026</span> Kaiwen Qiu</span>
       <span>New Brunswick, New Jersey</span>
-      <a href="#top">Back to top ↑</a>
+      <a href="contact.html">Get in touch ↗</a>
     </footer>
   </body>
 </html>

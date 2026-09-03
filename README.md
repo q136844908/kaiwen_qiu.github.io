@@ -2,7 +2,7 @@
 
 Static personal website for Kaiwen Qiu, an Economics Ph.D. candidate at Rutgers University working on real-time forecasting, machine learning, economic narratives, and systematic macro research.
 
-The site is designed for both the 2026 job market and research discovery. It includes selected-paper contributions, an interactive EconBERT prototype, quantitative experience, teaching, structured search metadata, and a current downloadable CV.
+The site is designed for both the 2026 job market and research discovery. It uses separate Home, Research, EconBERT, Experience, and Contact pages, with an interactive EconBERT prototype, four paper abstracts, quantitative and teaching experience, structured search metadata, and a current downloadable CV.
 
 ## Publishing
 
