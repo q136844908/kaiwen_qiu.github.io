@@ -1982,7 +1982,7 @@ footer {
   z-index: 1;
   max-width: none;
   margin-top: 1.25rem;
-  font-size: clamp(2.1rem, 3.55vw, 3.1rem);
+  font-size: clamp(1.85rem, 2.9vw, 2.7rem);
   line-height: 1.02;
   white-space: nowrap;
 }
@@ -2036,11 +2036,13 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .standalone-contact h1 {
     white-space: normal;
   }
+}
 
+@media (max-width: 800px) {
   .site-header nav a.active::after {
     bottom: 0.45rem;
   }
