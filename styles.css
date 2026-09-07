@@ -1980,8 +1980,11 @@ footer {
 .contact h1 {
   position: relative;
   z-index: 1;
-  max-width: 980px;
+  max-width: none;
   margin-top: 1.25rem;
+  font-size: clamp(2.1rem, 3.55vw, 3.1rem);
+  line-height: 1.02;
+  white-space: nowrap;
 }
 
 .contact-meta {
@@ -2034,6 +2037,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .standalone-contact h1 {
+    white-space: normal;
+  }
+
   .site-header nav a.active::after {
     bottom: 0.45rem;
   }
