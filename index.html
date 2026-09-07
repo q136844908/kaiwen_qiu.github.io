@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#101829" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://q136844908.github.io/" />
+    <meta property="og:url" content="https://kaiwenqiu.com/" />
     <meta
       property="og:title"
       content="Kaiwen Qiu — Econometrics, Forecasting &amp; LLM Sentiment"
@@ -20,7 +20,7 @@
     />
     <meta
       property="og:image"
-      content="https://q136844908.github.io/assets/og-preview.jpg"
+      content="https://kaiwenqiu.com/assets/og-preview.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -33,9 +33,9 @@
     />
     <meta
       name="twitter:image"
-      content="https://q136844908.github.io/assets/og-preview.jpg"
+      content="https://kaiwenqiu.com/assets/og-preview.jpg"
     />
-    <link rel="canonical" href="https://q136844908.github.io/" />
+    <link rel="canonical" href="https://kaiwenqiu.com/" />
     <title>Kaiwen Qiu — Econometrician &amp; Quantitative Researcher</title>
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Kaiwen Qiu",
-        "url": "https://q136844908.github.io/",
+        "url": "https://kaiwenqiu.com/",
         "email": "mailto:kq60@economics.rutgers.edu",
         "jobTitle": "Economics Ph.D. Candidate and Quantitative Researcher",
         "affiliation": {
@@ -129,42 +129,51 @@
           <div class="demo-card">
             <div class="demo-topline">
               <div>
-                <span class="live-dot"></span> INTERACTIVE RESEARCH PROTOTYPE
+                <span class="live-dot"></span> LIVE BROWSER INFERENCE
               </div>
               <span>3 classes</span>
             </div>
             <h2>What does this text imply for the economy?</h2>
             <p class="demo-intro">
               EconBERT classifies macroeconomic direction rather than surface
-              emotion. Try a validated example below.
+              emotion. Try a validated example or paste your own passage.
             </p>
             <div class="example-tabs" aria-label="Example economic passages">
               <button type="button" data-example="growth" class="active">
                 Growth
               </button>
-              <button type="button" data-example="mixed">Mixed</button>
+              <button type="button" data-example="neutral">Neutral</button>
               <button type="button" data-example="downturn">Downturn</button>
             </div>
             <label class="sr-only" for="economic-text">Economic text</label>
             <textarea
               id="economic-text"
               rows="5"
+              maxlength="3500"
               placeholder="Paste economic text…"
             ></textarea>
             <button class="analyze-button" id="analyze-button" type="button">
-              Analyze passage <span aria-hidden="true">↗</span>
+              Analyze with EconBERT <span aria-hidden="true">↗</span>
             </button>
 
-            <div class="demo-notice" id="demo-notice" role="status" hidden>
-              <strong>Custom inference is not public yet.</strong>
-              The three examples use precomputed model outputs. A public model
-              endpoint is the remaining connection for new text.
+            <div
+              class="demo-notice"
+              id="demo-notice"
+              role="status"
+              aria-live="polite"
+              hidden
+            >
+              <strong id="demo-status-title">Preparing EconBERT</strong>
+              <span id="demo-status-detail"></span>
+              <i class="demo-progress" hidden
+                ><em id="demo-progress-bar"></em
+              ></i>
             </div>
 
             <div class="result-panel" id="result-panel" aria-live="polite">
               <div class="score-head">
                 <div>
-                  <span>Economic tone</span><strong id="score">+0.62</strong>
+                  <span>Economic tone</span><strong id="score">+0.95</strong>
                 </div>
                 <span class="classification positive" id="classification"
                   >● Positive</span
@@ -178,21 +187,22 @@
               </div>
               <div class="probabilities">
                 <div>
-                  <span>Negative</span><b id="negative-value">12%</b
+                  <span>Negative</span><b id="negative-value">1%</b
                   ><i><em id="negative-bar"></em></i>
                 </div>
                 <div>
-                  <span>Neutral</span><b id="neutral-value">14%</b
+                  <span>Neutral</span><b id="neutral-value">2%</b
                   ><i><em id="neutral-bar"></em></i>
                 </div>
                 <div>
-                  <span>Positive</span><b id="positive-value">74%</b
+                  <span>Positive</span><b id="positive-value">97%</b
                   ><i><em id="positive-bar"></em></i>
                 </div>
               </div>
             </div>
             <p class="demo-footnote">
-              Illustrative interface using precomputed research examples. Score
+              New text runs privately on your device; the first analysis loads
+              a ≈65 MB quantized model. Input is truncated at 512 tokens. Score
               = P(positive) − P(negative).
             </p>
           </div>

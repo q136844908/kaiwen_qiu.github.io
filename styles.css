@@ -542,15 +542,45 @@ footer a:hover {
 .demo-notice {
   margin-top: 0.9rem;
   padding: 0.72rem;
-  border: 1px solid rgba(255, 112, 88, 0.55);
-  background: rgba(255, 112, 88, 0.08);
+  border: 1px solid rgba(85, 217, 198, 0.45);
+  background: rgba(85, 217, 198, 0.08);
   color: #c9d0df;
   font-size: 0.72rem;
+}
+
+.demo-notice.is-error {
+  border-color: rgba(255, 112, 88, 0.55);
+  background: rgba(255, 112, 88, 0.08);
 }
 
 .demo-notice strong {
   display: block;
   color: var(--white);
+}
+
+.demo-notice > span {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.demo-progress {
+  display: block;
+  height: 3px;
+  margin-top: 0.6rem;
+  overflow: hidden;
+  background: #34415b;
+}
+
+.demo-progress[hidden] {
+  display: none;
+}
+
+.demo-progress em {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--aqua);
+  transition: width 0.2s ease;
 }
 
 .demo-link {
