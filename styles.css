@@ -216,10 +216,11 @@ footer a:hover {
 .hero h1 {
   margin: 1.45rem 0 1.45rem;
   font-family: var(--serif);
-  font-size: clamp(5rem, 9vw, 8.1rem);
+  font-size: clamp(4rem, 6vw, 6.2rem);
   font-weight: 500;
-  line-height: 0.76;
+  line-height: 0.9;
   letter-spacing: -0.078em;
+  white-space: nowrap;
 }
 
 .hero-role {
@@ -1266,7 +1267,7 @@ footer {
     gap: 3.2rem;
   }
   .hero h1 {
-    font-size: clamp(4.2rem, 25vw, 6.4rem);
+    font-size: clamp(3.2rem, 14vw, 5.2rem);
   }
   .hero-role {
     font-size: 1.55rem;
