@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="EconBERT is Kaiwen Qiu's domain-specific economic-tone model for constructing real-time narrative sentiment indices from official U.S. economic text."
+      content="EconBERT connects economic language with investment research through LLM teacher–student learning, eight macroeconomic themes, and real-time nowcasting research."
     />
     <meta name="theme-color" content="#101829" />
     <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@
     <meta property="og:title" content="EconBERT — Kaiwen Qiu" />
     <meta
       property="og:description"
-      content="A domain-specific model that reads economic direction rather than generic emotion."
+      content="Economic language. Investment insight. Explore EconBERT's eight economic themes, LLM teacher–student approach, and expanding policy and market-news corpus."
     />
     <meta
       property="og:image"
@@ -27,6 +27,8 @@
     <title>EconBERT — Kaiwen Qiu</title>
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="econbert.css?v=20261007" />
+    <script src="econbert-topics.js?v=20261007" defer></script>
   </head>
   <body class="subpage dark-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -61,133 +63,350 @@
             <div>
               <p class="section-index light">02 / EconBERT</p>
               <h1 id="econbert-title">
-                Economic direction,<br />not generic emotion.
+                Economic language.<br /><em>Investment insight.</em>
               </h1>
             </div>
             <div class="story-intro">
               <p>
-                General sentiment models often confuse cautious wording with bad
-                economic news. EconBERT instead asks what a passage implies for
-                macroeconomic conditions—so easing inflation pressure can be
-                positive even when the prose sounds restrained.
+                What is changing in the economy—and what deserves a closer look
+                in markets? EconBERT turns economic text into structured measures
+                of economic tone across growth, inflation, financial conditions,
+                and risk. It gives
+                quantitative researchers, investment teams, and portfolio leaders
+                a consistent lens on the economic narrative, beyond whether a
+                headline simply sounds optimistic or pessimistic.
               </p>
               <a class="light-link" href="index.html#econbert-demo"
-                >Try the interactive examples
+                >Try EconBERT on your own text
                 <span aria-hidden="true">↗</span></a
               >
             </div>
           </div>
 
+          <div class="research-lenses" aria-label="Investment research applications">
+            <span class="lenses-label">Research across markets</span>
+            <span>Macro &amp; multi-asset</span>
+            <span>Equities</span>
+            <span>Rates &amp; credit</span>
+            <span>FX</span>
+            <span>Commodities</span>
+          </div>
+
           <div class="method-grid">
             <article>
               <span>01</span>
-              <h2>Domain corpus</h2>
+              <h2>Economic intelligence corpus</h2>
               <p>
-                Federal Reserve, BLS, and Census narratives anchor the model in
-                official economic language.
+                Official Fed, BLS, and Census narratives form the core.
+                An expanding ProQuest news corpus brings higher-frequency
+                reporting on markets, fiscal policy, and financial risk into
+                the research agenda.
               </p>
             </article>
             <article>
               <span>02</span>
-              <h2>LLM-assisted labels</h2>
+              <h2>LLM-guided economic interpretation</h2>
               <p>
-                Pre-2013 passages receive positive, neutral, or negative
-                macro-direction labels.
+                An LLM teacher applies a macroeconomic rubric to label passages
+                positive, neutral, or negative. The target is economic direction,
+                not emotional wording: easing price pressure can signal
+                improvement even in a cautious statement.
               </p>
             </article>
             <article>
               <span>03</span>
-              <h2>Distilled classifier</h2>
+              <h2>Teacher–student knowledge distillation</h2>
               <p>
-                A compact DistilBERT student learns the task, then remains
-                frozen out of sample.
+                Teacher-generated labels transfer the task to a compact
+                DistilBERT student. This label-based distillation makes repeated
+                scoring practical; the research model is fitted on pre-2013
+                documents and then frozen for out-of-sample evaluation.
               </p>
             </article>
             <article>
               <span>04</span>
-              <h2>Real-time index</h2>
+              <h2>Narrative signals for nowcasting</h2>
               <p>
-                Passage scores become source-balanced monthly measures suitable
-                for forecast evaluation.
+                Passage scores become source-balanced monthly tone indices.
+                A complementary index combines eight economic themes. Paired
+                with real-time data vintages, these let researchers test whether
+                narratives add timely information to macro and market forecasts.
               </p>
             </article>
           </div>
 
-          <section class="model-purpose" aria-labelledby="purpose-title">
+          <section class="corpus-section" aria-labelledby="corpus-title">
+            <div class="econbert-section-heading">
+              <div>
+                <p class="section-index light">The information set</p>
+                <h2 id="corpus-title">From official releases<br />to the flow of market news.</h2>
+              </div>
+              <p>
+                A common economic lens across different kinds of text.
+                Official documents anchor the current model; higher-frequency
+                news broadens the questions the research can ask.
+              </p>
+            </div>
+            <div class="corpus-grid">
+              <article>
+                <p class="corpus-status">Core research corpus</p>
+                <h3>Official economic narratives</h3>
+                <p>Federal Reserve Beige Books and FOMC minutes; BLS employment
+                  and CPI releases; Census retail-sales reports.</p>
+                <span class="corpus-detail">Policy · Prices · Activity</span>
+              </article>
+              <article>
+                <p class="corpus-status extension">News extension · ProQuest</p>
+                <h3>Major news &amp; market wires</h3>
+                <p>Global Newsstream coverage from major U.S. newspapers,
+                  including The Wall Street Journal and The New York Times,
+                  plus Dow Jones Institutional News.</p>
+                <span class="corpus-detail">Datasets 1A &amp; 1B · Higher-frequency reporting</span>
+              </article>
+              <article>
+                <p class="corpus-status extension">News extension · ProQuest</p>
+                <h3>Policy, stability &amp; stress</h3>
+                <p>ProQuest One Academic collections on U.S. fiscal policy,
+                  financial stability and bank regulation, and macro-financial
+                  risk and stress.</p>
+                <span class="corpus-detail">Datasets 4, 5 &amp; 7 · Policy and risk coverage</span>
+              </article>
+            </div>
+            <p class="corpus-note">The high-frequency news extension is ongoing research;
+              its contribution to volatility forecasting is still being evaluated.</p>
+          </section>
+
+          <section class="topic-section" aria-labelledby="topics-title">
+            <div class="econbert-section-heading">
+              <div>
+                <p class="section-index light">Explore the economic language</p>
+                <h2 id="topics-title">One economy.<br /><em>Eight connected themes.</em></h2>
+              </div>
+              <p>These word clouds show the vocabulary of each topic and its
+                associated economic tone. Explore a theme to see how its
+                narrative can frame a different investment-research question.</p>
+            </div>
+
+            <div class="topic-selector" aria-label="Economic topics">
+              <a id="tab-inflation" href="#topic-inflation"><span>01</span> Inflation &amp; prices</a>
+              <a id="tab-labor" href="#topic-labor"><span>02</span> Labor market</a>
+              <a id="tab-activity" href="#topic-activity"><span>03</span> Real activity</a>
+              <a id="tab-policy" href="#topic-policy"><span>04</span> Monetary policy</a>
+              <a id="tab-financial" href="#topic-financial"><span>05</span> Financial conditions</a>
+              <a id="tab-housing" href="#topic-housing"><span>06</span> Housing</a>
+              <a id="tab-consumption" href="#topic-consumption"><span>07</span> Consumption &amp; retail</a>
+              <a id="tab-uncertainty" href="#topic-uncertainty"><span>08</span> Uncertainty &amp; risks</a>
+            </div>
+
+            <div class="topic-panels">
+              <section id="topic-inflation" class="topic-panel" aria-labelledby="tab-inflation">
+                <figure>
+                  <a href="assets/econbert-topics/inflation-prices.png" target="_blank" rel="noreferrer" aria-label="Open inflation and prices word cloud at full resolution">
+                    <img src="assets/econbert-topics/inflation-prices.png" width="3377" height="1960" alt="Inflation and prices word cloud, including consumer, price, index, and CPI; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">01 / Inflation and prices</p>
+                  <h3>Look beyond “prices rose.”</h3>
+                  <p>Inflation language connects household purchasing power,
+                    firms’ cost pressures, and the policy outlook. Economic
+                    context matters more than the emotional charge of a word.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Are price pressures easing—or shifting
+                    between consumer demand, input costs, and margins?</p>
+                  <p class="topic-markets">Rates · Equities · Commodities</p>
+                </div>
+              </section>
+
+              <section id="topic-labor" class="topic-panel" aria-labelledby="tab-labor">
+                <figure>
+                  <a href="assets/econbert-topics/labor-market.png" target="_blank" rel="noreferrer" aria-label="Open labor market word cloud at full resolution">
+                    <img src="assets/econbert-topics/labor-market.png" width="3377" height="1960" loading="lazy" alt="Labor market word cloud, including employment, household, establishment, and force; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">02 / Labor market</p>
+                  <h3>Read the balance of resilience and cooling.</h3>
+                  <p>Employment narratives connect hiring, labor supply, wages,
+                    and household income—dimensions that a single headline
+                    payroll number cannot fully describe.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Is hiring moderating alongside
+                    resilient demand, or pointing to a broader slowdown?</p>
+                  <p class="topic-markets">Equities · Rates · Multi-asset</p>
+                </div>
+              </section>
+
+              <section id="topic-activity" class="topic-panel" aria-labelledby="tab-activity">
+                <figure>
+                  <a href="assets/econbert-topics/real-activity.png" target="_blank" rel="noreferrer" aria-label="Open real activity word cloud at full resolution">
+                    <img src="assets/econbert-topics/real-activity.png" width="3377" height="1960" loading="lazy" alt="Real activity word cloud, including manufacturing, production, orders, and agriculture; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">03 / Real activity</p>
+                  <h3>Follow the demand behind the cycle.</h3>
+                  <p>Language about production, orders, and business activity
+                    provides a narrative view of the real economy alongside
+                    released macroeconomic data.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Is momentum broadening across the
+                    economy, or becoming concentrated in a few sectors?</p>
+                  <p class="topic-markets">Cyclical equities · Commodities · Macro</p>
+                </div>
+              </section>
+
+              <section id="topic-policy" class="topic-panel" aria-labelledby="tab-policy">
+                <figure>
+                  <a href="assets/econbert-topics/monetary-policy.png" target="_blank" rel="noreferrer" aria-label="Open monetary policy word cloud at full resolution">
+                    <img src="assets/econbert-topics/monetary-policy.png" width="3377" height="1960" loading="lazy" alt="Monetary policy word cloud, including funds, policy, monetary, and open; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">04 / Monetary policy</p>
+                  <h3>Put policy language in economic context.</h3>
+                  <p>Central-bank communication links the outlook for activity
+                    and inflation to policy decisions. Economic tone is distinct
+                    from a simple hawkish-versus-dovish label.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">How is the balance of growth and
+                    inflation concerns evolving around policy decisions?</p>
+                  <p class="topic-markets">Rates · FX · Equity duration</p>
+                </div>
+              </section>
+
+              <section id="topic-financial" class="topic-panel" aria-labelledby="tab-financial">
+                <figure>
+                  <a href="assets/econbert-topics/financial-conditions.png" target="_blank" rel="noreferrer" aria-label="Open financial conditions word cloud at full resolution">
+                    <img src="assets/econbert-topics/financial-conditions.png" width="3377" height="1960" loading="lazy" alt="Financial conditions word cloud, including banks, credit, market, and loan; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">05 / Financial conditions</p>
+                  <h3>Track the language of credit transmission.</h3>
+                  <p>Banking and credit narratives describe how financing
+                    conditions reach households and firms, complementing
+                    market-based measures of financial stress.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Are tighter lending conditions
+                    becoming a headwind for investment and demand?</p>
+                  <p class="topic-markets">Credit · Financial equities · Multi-asset</p>
+                </div>
+              </section>
+
+              <section id="topic-housing" class="topic-panel" aria-labelledby="tab-housing">
+                <figure>
+                  <a href="assets/econbert-topics/housing.png" target="_blank" rel="noreferrer" aria-label="Open housing word cloud at full resolution">
+                    <img src="assets/econbert-topics/housing.png" width="3377" height="1960" loading="lazy" alt="Housing word cloud, including housing, residential, sales, and construction; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">06 / Housing</p>
+                  <h3>Read a rate-sensitive part of the economy.</h3>
+                  <p>Housing narratives connect affordability, residential
+                    construction, and sales with the wider transmission of
+                    interest rates and household demand.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Is the housing narrative signaling
+                    renewed demand or continued financing pressure?</p>
+                  <p class="topic-markets">Real estate · Homebuilders · Materials</p>
+                </div>
+              </section>
+
+              <section id="topic-consumption" class="topic-panel" aria-labelledby="tab-consumption">
+                <figure>
+                  <a href="assets/econbert-topics/consumption-retail-sales.png" target="_blank" rel="noreferrer" aria-label="Open consumption and retail sales word cloud at full resolution">
+                    <img src="assets/econbert-topics/consumption-retail-sales.png" width="3377" height="1960" loading="lazy" alt="Consumption and retail sales word cloud, including retail, sales, advance, and stores; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">07 / Consumption and retail sales</p>
+                  <h3>Connect the consumer to the growth outlook.</h3>
+                  <p>Retail and spending narratives add context to changes
+                    in household demand, connecting the macro outlook with
+                    questions about consumer-facing sectors.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Is spending strength widespread,
+                    or masking softer demand in particular categories?</p>
+                  <p class="topic-markets">Consumer equities · Credit · Macro</p>
+                </div>
+              </section>
+
+              <section id="topic-uncertainty" class="topic-panel" aria-labelledby="tab-uncertainty">
+                <figure>
+                  <a href="assets/econbert-topics/uncertainty-downside-risks.png" target="_blank" rel="noreferrer" aria-label="Open uncertainty and downside risks word cloud at full resolution">
+                    <img src="assets/econbert-topics/uncertainty-downside-risks.png" width="3377" height="1960" loading="lazy" alt="Uncertainty and downside risks word cloud, including uncertainty, discouraged, and unemployed; size represents topic distinctiveness and color represents average economic tone." />
+                  </a>
+                  <figcaption>Original topic word cloud <span>Open full resolution ↗</span></figcaption>
+                </figure>
+                <div class="topic-context">
+                  <p class="topic-kicker">08 / Uncertainty and downside risks</p>
+                  <h3>Distinguish caution from deterioration.</h3>
+                  <p>Risk language can reflect uncertainty about the outlook
+                    or evidence of weaker conditions. The distinction matters
+                    when interpreting cautious economic communication.</p>
+                  <p class="question-label">Investment-research question</p>
+                  <p class="topic-question">Are downside concerns becoming
+                    broader or more economically specific?</p>
+                  <p class="topic-markets">Risk research · Credit · Multi-asset</p>
+                </div>
+              </section>
+            </div>
+
+            <div class="cloud-reading-guide">
+              <div>
+                <strong>How to read the clouds</strong>
+                <p>Word size indicates topic distinctiveness. Color indicates
+                  average EconBERT economic tone—not a fixed positive or
+                  negative dictionary entry.</p>
+              </div>
+              <div class="tone-legend" aria-label="Average economic tone color legend">
+                <span><i class="tone-negative" aria-hidden="true"></i>Negative</span>
+                <span><i class="tone-neutral" aria-hidden="true"></i>Near-neutral</span>
+                <span><i class="tone-positive" aria-hidden="true"></i>Positive</span>
+              </div>
+            </div>
+            <p class="cloud-source">Original word clouds from the job market paper,
+              Figures 4–5 (September 26, 2026), based on the official-document corpus.
+              These are descriptive views of language, not trading signals or
+              evidence of asset-specific forecast performance.</p>
+          </section>
+
+          <section class="model-purpose investment-purpose" aria-labelledby="purpose-title">
             <div>
-              <p class="section-index light">Why domain-specific tone?</p>
+              <p class="section-index light">Built for research, not just a score</p>
               <h2 id="purpose-title">
-                Language becomes a measurable economic signal.
+                An additional information set.<br /><em>A testable investment question.</em>
               </h2>
             </div>
             <div class="purpose-copy">
               <p>
-                EconBERT is designed around economic interpretation rather than
-                everyday affect. It separates what a document sounds like from
-                what its information implies for growth, inflation, labor
-                markets, or financial conditions.
+                For a quant team, narrative indices can sit alongside structured
+                data in a forecasting pipeline. For investment analysts and
+                portfolio leaders, the eight themes provide a consistent way
+                to organize questions about the cycle, policy, and risk.
               </p>
               <p>
-                The resulting passage-level probabilities are aggregated into
-                monthly narrative indices and evaluated in genuinely real-time
-                forecasting settings, alongside macroeconomic data vintages and
-                professional forecasts.
+                The job market paper evaluates monthly indices in real-time
+                nowcasting and forecasting exercises spanning macroeconomic
+                activity, Treasury rates, equity returns, volatility, and credit
+                conditions. Applications to individual sectors, FX, and
+                commodities are research opportunities, not demonstrated
+                trading results.
               </p>
+              <div class="econbert-actions">
+                <a class="light-link" href="research.html">Read the research <span aria-hidden="true">↗</span></a>
+                <a class="light-link" href="contact.html">Discuss an application <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
           </section>
-
-          <section class="chart-section" aria-labelledby="indices-title">
-            <div class="chart-heading">
-              <div>
-                <p class="section-index light">Research visualization</p>
-                <h2 id="indices-title">
-                  Narrative indices across the business cycle.
-                </h2>
-              </div>
-              <p>
-                The figure keeps the model comparison and topic-conditioned
-                measures while omitting the alternative-monthly-weightings
-                panel.
-              </p>
-            </div>
-
-            <figure class="research-figure split-chart">
-              <div class="chart-crop chart-crop-top">
-                <img
-                  src="assets/econbert-sentiment-series.png"
-                  alt="Monthly source-balanced EconBERT and FinBERT sentiment indices with shaded NBER recessions"
-                />
-              </div>
-              <figcaption>
-                <strong>Model comparison.</strong> Source-balanced EconBERT and
-                FinBERT indices respond to major macroeconomic turning points.
-              </figcaption>
-            </figure>
-
-            <figure class="research-figure split-chart">
-              <div class="chart-crop chart-crop-bottom">
-                <img
-                  src="assets/econbert-sentiment-series.png"
-                  alt="Topic-conditioned EconBERT tone indices for inflation, labor, financial conditions, and real activity"
-                />
-              </div>
-              <figcaption>
-                <strong>Topic-conditioned tone.</strong> Economic direction can
-                differ across inflation, labor, financial conditions, and real
-                activity within the same month.
-              </figcaption>
-            </figure>
-          </section>
-
-          <div class="researcher-note">
-            <p>Research interests</p>
-            <div>
-              <span>Domain-specific language models</span
-              ><span>Text-as-data measurement</span
-              ><span>Real-time forecast evaluation</span
-              ><span>Human and model expectations</span>
-            </div>
-          </div>
         </div>
       </section>
     </main>
