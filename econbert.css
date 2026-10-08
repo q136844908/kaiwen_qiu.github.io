@@ -90,7 +90,7 @@
 
 .corpus-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2.2rem;
 }
@@ -125,17 +125,9 @@
 }
 
 .corpus-grid p:not(.corpus-status) {
-  margin: 0.7rem 0 1.4rem;
+  margin: 0.7rem 0 0;
   color: #b5bed0;
   font-size: 0.83rem;
-}
-
-.corpus-detail {
-  margin-top: auto;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--dark-line);
-  color: #a7b1c5;
-  font-size: 0.65rem;
 }
 
 .corpus-note,
